@@ -22,6 +22,13 @@ function checkGuess() {
     // Conditions
     if (userValue === randomNum) {
         hint.textContent = "Tillykke, du gættede det!";
+
+                // Add confetti effect
+                confetti({
+                    particleCount: 150,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                });
     } else if (userValue < randomNum) {
         hint.textContent = "Desværre, dit gæt er for lavt - prøv igen!";
     } else {
